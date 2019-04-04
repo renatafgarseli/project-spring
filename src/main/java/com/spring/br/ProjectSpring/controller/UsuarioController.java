@@ -38,8 +38,6 @@ public class UsuarioController {
 			@RequestParam(value = "email", required = false) String email) {
 		return ResponseEntity.ok(usuarioService.findByNameAndEmail(name, email));
 	}
-
-	
 	
 	@PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity saveCandidate(@RequestBody Usuario candidate) {
