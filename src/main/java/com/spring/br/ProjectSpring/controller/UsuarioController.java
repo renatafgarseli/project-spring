@@ -30,6 +30,7 @@ public class UsuarioController {
 
 	@GetMapping(path = "/name", produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<List<Usuario>> findByName(@RequestParam(value = "name", required = false) String name) {
+
 		return ResponseEntity.ok(usuarioService.findByName(name));
 	}
 
